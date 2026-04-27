@@ -8,24 +8,54 @@
 <body>
 
 <header>
-  <h1>Ritesh Kumar</h1>
-  <p>Frontend Developer</p>
+  <nav>
+    <h2>Ritesh</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <button id="themeToggle">🌙</button>
+    </ul>
+  </nav>
 </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Frontend developer skilled in React, JS, and responsive design.</p>
+<section id="home">
+  <img src="images/profile.jpg" class="profile">
+  <h1>Hi, I'm Ritesh</h1>
+  <h2><span id="typing"></span></h2>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="card">Portfolio Website</div>
-  <div class="card">Cartify E-commerce</div>
+
+  <div class="filters">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+  </div>
+
+  <div class="project-container">
+
+    <div class="card web">
+      <img src="images/project1.jpg">
+      <h3>Portfolio</h3>
+    </div>
+
+    <div class="card web">
+      <img src="images/project2.jpg">
+      <h3>Cartify</h3>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: riteshspl005@gmail.com</p>
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <script src="script.js"></script>
